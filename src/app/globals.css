@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::selection {
+  background-color: #63d7c020;
+  color: #63d7c0;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #222a35;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #626970;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #767676;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@layer base {
+  .nav-link {
+    @apply px-4 py-1.5 rounded-full text-white md:text-white/70 text-sm font-semibold hover:bg-white/10 hover:text-white transition duration-300;
+  }
+  .hero-ring {
+    @apply absolute inset-0 border-2 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border-emerald-300/5 shadow-[0_0_80px_inset] shadow-emerald-300/5;
+  }
+}
+
+@layer utilities {
+  .container {
+    @apply lg:max-w-5xl;
+  }
+}
